@@ -1,0 +1,63 @@
+# bash_profile
+
+export LC_ALL=en_US.UTF-8
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
+# Bash Completion <
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
+#export XDG_CACHE_HOME=$HOME/
+# Python
+PATH="$HOME/.local/bin:$PATH"
+
+# Scala
+export PATH="/usr/local/opt/gettext/bin:$PATH"
+export PATH="${HOME}/.scalaenv/bin:${PATH}"
+eval "$(scalaenv init -)"
+export PATH="${HOME}/.sbtenv/bin:${PATH}"
+eval "$(sbtenv init -)"
+export PATH="${HOME}/Bin:${PATH}"
+
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+# golang
+export GOPATH=$HOME/go
+export PATH=$PATH:$(go env GOPATH)/bin
+
+PKG_CONFIG_PATH=/usr/local/Cellar/zeromq/4.3.0/lib/pkgconfig
+
+# Ruby
+# Load rbenv automatically by appending
+# the following to ~/.bash_profile:
+eval "$(rbenv init -)"
+
+## Neovim
+export PATH=$PATH:$HOME/.SpaceVim/bin
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
+
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
+
+# GraalVM java11
+export GRAALVM_HOME="/Library/Java/JavaVirtualMachines/graalvm-ce-java11-21.1.0"
+export PATH="$GRAALVM_HOME/Contents/Home/bin:$PATH"
+
+# Java
+export JAVA_HOME=$(/usr/libexec/java_home -v "11")
+export PATH="$JAVA_HOME/bin:$PATH"
+
+
+# alias
+
+# Bash Completion 'brew install bash-completion'
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+export GPG_TTY=$(tty)

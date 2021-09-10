@@ -1,0 +1,135 @@
+
+#function _update_ps1() {
+#    PS1=$(powerline-shell $?)
+#}
+
+#if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+#    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+#fi
+
+# command
+## history
+export HISTTIMEFORMAT='%F %T '
+
+# nnn
+# https://github.com/jarun/nnn/wiki/How-to
+export NNN_BMS='o:~/Develop;O:~/Posts;7:~/Develop/Scala'
+export NNN_CONTEXT_COLORS='6534'
+export NNN_USE_EDITOR=1
+export NNN_SHOW_HIDDEN=1
+export NNN_COPIER="$HOME/Bin/copier.sh"
+export NNN_NOTE="$HOME/.mynotes"
+
+# enhancd
+source ~/GitHub/enhancd/init.sh
+
+
+## fff
+# Use LS_COLORS to color fff.
+# (On by default if available)
+# (Ignores FFF_COL1)
+export FFF_LS_COLORS=1
+
+# Show/Hide hidden files on open.
+# (On by default)
+export FFF_HIDDEN=0
+
+# Directory color [0-9]
+export FFF_COL1=4
+
+# Status color [0-9]
+export FFF_COL2=7
+
+# Selection color [0-9] (copied/moved files)
+export FFF_COL3=6
+
+# Cursor color [0-9]
+export FFF_COL4=1
+
+# Text Editor
+export EDITOR="nvim"
+
+# File Opener
+# export FFF_OPENER="xdg-open"
+
+# Enable or disable CD on exit.
+# Default: '1'
+export FFF_CD_ON_EXIT=1
+
+# CD on exit helper file
+# Default: '${XDG_CACHE_HOME}/fff/fff.d'
+#          If not using XDG, '${HOME}/.cache/fff/fff.d' is used.
+export FFF_CD_FILE=~/.fff_d
+
+# Trash Directory
+# Default: '${XDG_DATA_HOME}/fff/trash'
+#          If not using XDG, '${XDG_DATA_HOME}/fff/trash' is used.
+export FFF_TRASH=~/.local/share/fff/trash
+
+# Trash Command
+# Default: 'mv'
+#          Define a custom program to use to trash files.
+#          The program will be passed the list of selected files
+#          and directories.
+export FFF_TRASH_CMD="mv"
+
+# Favourites (Bookmarks) (keys 1-9) (dir or file)
+export FFF_FAV1=~/Develop
+export FFF_FAV2=~/WorkDocs
+export FFF_FAV3=~/
+export FFF_FAV4=/tmp
+export FFF_FAV5=/
+export FFF_FAV6=
+export FFF_FAV7=
+export FFF_FAV8=
+export FFF_FAV9=
+
+# w3m-img offsets.
+export FFF_W3M_XOFFSET=0
+export FFF_W3M_YOFFSET=0
+
+# File format.
+# Customize the item string.
+# Format ('%f' is the current file): "str%fstr"
+# Example (Add a tab before files): FFF_FILE_FORMAT="\t%f"
+export FFF_FILE_FORMAT="%f"
+
+# Mark format.
+# Customize the marked item string.
+# Format ('%f' is the current file): "str%fstr"
+# Example (Add a ' >' before files): FFF_MARK_FORMAT="> %f"
+export FFF_MARK_FORMAT=" %f*"
+f() {
+    fff "$@"
+    cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")"
+  }
+
+alias lg='lazygit'
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /Users/k22/.nodebrew/node/v11.15.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash ] && . /Users/k22/.nodebrew/node/v11.15.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /Users/k22/.nodebrew/node/v11.15.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash ] && . /Users/k22/.nodebrew/node/v11.15.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[ -f /Users/k22/.nodebrew/node/v11.15.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.bash ] && . /Users/k22/.nodebrew/node/v11.15.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.bash
+
+ 
+if shopt -q login_shell; then 
+  export PYENV_ROOT="$HOME/.pyenv" 
+  export PATH="$PYENV_ROOT/bin:$PATH" 
+ eval "$(pyenv init --path)" 
+fi
+
+# Starship
+eval "$(starship init bash)"
+
+
+# Wasmer
+export WASMER_DIR="/Users/k22/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+
+
+complete -C /usr/local/bin/terraform terraform
