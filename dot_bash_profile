@@ -7,7 +7,12 @@ if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
 # Bash Completion <
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+# Bash Completion 'brew install bash-completion'
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+#[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 #export XDG_CACHE_HOME=$HOME/
 # Python
@@ -54,10 +59,6 @@ export PATH="$JAVA_HOME/bin:$PATH"
 
 # alias
 
-# Bash Completion 'brew install bash-completion'
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
-fi
 
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export GPG_TTY=$(tty)
