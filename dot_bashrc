@@ -133,3 +133,5 @@ export WASMER_DIR="/Users/k22/.wasmer"
 
 
 complete -C /usr/local/bin/terraform terraform
+
+
