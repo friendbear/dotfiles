@@ -1,0 +1,9 @@
+# pack-refs with: peeled fully-peeled 
+eedab148e6609bfea7ab4ea4e91329e50c42a139 refs/remotes/origin/auto-install
+3c625bc1e3bddd854ca5630e833939393890d890 refs/remotes/origin/docs
+5df698f6d2b8ee5ab9ce2895c439c7e82921c7ab refs/remotes/origin/easy_install
+9b918e86987934802236d1273e2f4fb66040d43f refs/remotes/origin/gh-pages
+744b93be5c1ec67c13c67f4d74aa887a9fb6ec51 refs/remotes/origin/iterm2_solarized_autoinstall
+cc4b8043f089a6ab54090c8ea9c55bc9b874199c refs/remotes/origin/master
+72ff8f33db0f6b3ec37f8012d1979184c1751ff8 refs/remotes/origin/visual_sel_aft_indent
+ac2f134bb780c5dad6ec4e5d8f9fc5bf07b1e068 refs/remotes/origin/vundle-migration
