@@ -53,8 +53,12 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export GRAALVM_HOME="/Library/Java/JavaVirtualMachines/graalvm-ce-java11-21.1.0"
 export PATH="$GRAALVM_HOME/Contents/Home/bin:$PATH"
 
+# GraalVM java11
+export GRAALVM_HOME="/Library/Java/JavaVirtualMachines/graalvm-ce-java17-21.3.0"
+export PATH="$GRAALVM_HOME/Contents/Home/bin:$PATH"
+
 # Java
-export JAVA_HOME=$(/usr/libexec/java_home -v "11")
+export JAVA_HOME=$(/usr/libexec/java_home -- v "17")
 export PATH="$JAVA_HOME/bin:$PATH"
 
 
