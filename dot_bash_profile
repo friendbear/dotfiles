@@ -80,4 +80,5 @@ export PATH="$PATH:$HOME/Apache/kafka/bin"
 
 
 #
-export PATH="/usr/local/opt/qt@5/bin:$PATH"'
+export PATH="/usr/local/opt/qt@5/bin:$PATH"
+
