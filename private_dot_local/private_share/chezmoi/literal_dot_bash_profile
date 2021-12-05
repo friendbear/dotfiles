@@ -12,7 +12,8 @@ fi
 #  . $(brew --prefix)/etc/bash_completion
 #fi
 #[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+#[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+[ -f $(brew --prefix)/share/bash-completion/bash_completion ] && . $(brew --prefix)/share/bash-completion/bash_completion
 
 #export XDG_CACHE_HOME=$HOME/
 # Python

@@ -8,10 +8,10 @@ if [ -f ~/.bashrc ]; then
 fi
 # Bash Completion <
 # Bash Completion 'brew install bash-completion'
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
-fi
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+#if [ -f $(brew --prefix)/etc/bash_completion ]; then
+#  . $(brew --prefix)/etc/bash_completion
+#fi
+#[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 #export XDG_CACHE_HOME=$HOME/
