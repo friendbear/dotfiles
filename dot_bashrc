@@ -123,6 +123,9 @@ if shopt -q login_shell; then
  eval "$(pyenv init --path)" 
 fi
 
+# cantino/mcfly
+eval "$(mcfly init bash)"
+
 # Starship
 eval "$(starship init bash)"
 
