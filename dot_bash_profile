@@ -9,6 +9,8 @@ fi
 # Bash Completion@2
 [[ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix)/etc/profile.d/bash_completion.sh"
 
+export PATH="${HOME}/Bin:${PATH}"
+
 #export XDG_CACHE_HOME=$HOME/
 # Python
 PATH="$HOME/.local/bin:$PATH"
@@ -19,7 +21,8 @@ export PATH="${HOME}/.scalaenv/bin:${PATH}"
 eval "$(scalaenv init -)"
 export PATH="${HOME}/.sbtenv/bin:${PATH}"
 eval "$(sbtenv init -)"
-export PATH="${HOME}/Bin:${PATH}"
+
+export PATH="$PATH:${HOME}/Library/Application Support/Coursier/bin"
 
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
