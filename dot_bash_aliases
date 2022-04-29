@@ -1,0 +1,2 @@
+alias vector='docker run -it --rm timberio/vector:0.21.1-distroless-libc'
+

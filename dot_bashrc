@@ -106,6 +106,10 @@ f() {
 
 alias lg='lazygit'
 
+if [ -f ~/.bash_aliases ]: then
+  . ~/.bash_aliases
+fi
+
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [ -f /Users/k22/.nodebrew/node/v11.15.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash ] && . /Users/k22/.nodebrew/node/v11.15.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash
