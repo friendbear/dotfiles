@@ -130,6 +130,7 @@ eval "$(mcfly init bash)"
 eval "$(starship init bash)"
 
 
+
 # Wasmer
 export WASMER_DIR="/Users/k22/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
@@ -137,6 +138,4 @@ export WASMER_DIR="/Users/k22/.wasmer"
 
 complete -C /usr/local/bin/terraform terraform
 
-# checkov https://github.com/bridgecrewio/checkov#screenshots
-source <(register-python-argcomplete checkov)
 
